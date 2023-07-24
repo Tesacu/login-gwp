@@ -1,0 +1,16 @@
+<?php
+/**
+Plugin Name: Login GuardianesWP 
+Plugin URI: https://github.com/Tesacu
+Description: This plugin changes the message when the user and/or password fails.
+Version: 1.0
+Author: Teresa SC
+Author URI: https://www.guardianeswp.com/
+License: GPLv3 or later
+**/
+defined('ABSPATH') or die('Parece que no tienes permiso para acceder...');
+function disable_wordpress_login_errors() {
+  return 'ERROR: Credenciales de acceso incorrectas';
+}
+add_filter('login_errors', 'disable_wordpress_login_errors');
+?>

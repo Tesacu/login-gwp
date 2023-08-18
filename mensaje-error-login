@@ -5,7 +5,7 @@ Plugin URI: https://github.com/Tesacu
 Description: This plugin changes the message when the user and/or password fails.
 Version: 1.0
 Author: Teresa SC
-Author URI: https://www.guardianeswp.com/
+Author URI: https://guardianeswp.com/
 License: GPLv3 or later
 **/
 defined('ABSPATH') or die('Parece que no tienes permiso para acceder...');

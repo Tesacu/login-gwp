@@ -1,16 +1,21 @@
 <?php
 /**
-Plugin Name: Login GuardianesWP 
-Plugin URI: https://github.com/Tesacu
-Description: This plugin changes the message when the user and/or password fails.
-Version: 1.0
-Author: Teresa SC
-Author URI: https://guardianeswp.com/
-License: GPLv3 or later
-**/
+ * Plugin Name: Login GuardianesWP
+ * Plugin URI: https://github.com/Tesacu
+ * Description: This plugin changes the login error message when the username and/or password is incorrect.
+ * Version: 1.1
+ * Author: Teresa SC
+ * Author URI: https://guardianeswp.com/
+ * License: GPLv3 or later
+ * Text Domain: login-guardianeswp
+ */
+
 defined('ABSPATH') or die('Parece que no tienes permiso para acceder...');
-function disable_wordpress_login_errors() {
-  return 'ERROR: Credenciales de acceso incorrectas';
+
+function lgwp_custom_login_errors() {
+    // Mensaje genérico sanitizado y preparado para traducción
+    return esc_html__( 'ERROR: Credenciales de acceso incorrectas', 'login-guardianeswp' );
 }
-add_filter('login_errors', 'disable_wordpress_login_errors');
-?>
+
+// Filtro con prioridad alta para evitar que otros plugins lo sobrescriban
+add_filter( 'login_errors', 'lgwp_custom_login_errors', 999 );

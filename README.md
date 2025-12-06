@@ -1,5 +1,5 @@
 # mensaje-error-login
-Probado hasta: 6.3
+Probado hasta: 6.8
 
 Este plugin sirve para cambiar el mensaje de error que aparece por defecto al introducir un nombre de usuario y/o una contraseña incorrectos en el formulario de «Login» o acceso al panel de administración de WordPress.
 
